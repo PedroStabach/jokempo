@@ -6,15 +6,9 @@ while True:
     if req != "S":
         break
     #opcao de jogo
-    input("qual opcao deseja jogar?")
-    input("se for player x player digite 1")
-    input("se for player x bot digite 2")
-    input("se for bot x bot digite 3")
-    opcao = int(input("DIGITE SUA OPCAO "))
+    opcao = int(input("qual opcao deseja jogar?, se for player x player digite 1, se for player x bot digite 2, se for bot x bot digite 3, DIGITE SUA OPCAO"))
+ 
 
-    #parte do pedrinho 
-    # BOT X BOT, nao posso usar lista lascou 
-    #aleatorio
     if opcao == 1:
         print("Bem Vindo ao Jokempo digital!!")
 
@@ -40,6 +34,9 @@ while True:
     elif opcao ==2:
         print("nao tem ainda")
     elif opcao == 3:
+    #parte do pedrinho 
+    # BOT X BOT, nao posso usar lista lascou 
+    #aleatorio
         bot1 = random.randint(0,2)
 
         # gambiarra do diabo
@@ -56,9 +53,9 @@ while True:
 
         # gambiarra do diabo
         if bot2 == 0:
-            bot1Res = "pedra"
+            bot2Res = "pedra"
         elif bot2 == 1:
-            bot1Res = "papel"
+            bot2Res = "papel"
         elif bot2 == 2:
             bot2Res = "tesoura"
         print("o bot2 escolheu " + bot1Res)
