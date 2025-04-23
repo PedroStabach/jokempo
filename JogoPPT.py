@@ -1,5 +1,7 @@
 import random
 req = input("Deseja jogar? S/N: ")
+placar1 = 0
+placar2 = 0
 # looping
 while True:
 
@@ -11,6 +13,7 @@ while True:
         req = input("Deseja jogar? S/N: ")
     # opcao de jogo
     print("Qual opcao deseja jogar?")
+    print("existe o competidor da direita e o da esquerda")
     print("Se deseja jogar Player x Player digite 1.")
     print("Se for Player x Bot digite 2.")
     print("Se for Bot x Bot digite 3.")
@@ -26,18 +29,12 @@ while True:
         if Player1 == Player2:
             print("Vocês empataram")
 
-        elif Player1 == "pedra" and Player2 == "tesoura":
+        elif (Player1 == "pedra" and Player2 == "tesoura") or (Player1 == "papel" and Player2 == "pedra") or (Player1 == "tesoura" and Player2 == "papel"):
             print("Player 1 Ganhou!")
-        elif Player1 == "pedra" and Player2 == "papel":
+            placar1 += 1
+        else:
             print("Player 2 Ganhou!")
-        elif Player1 == "papel" and Player2 == "pedra":
-            print("Player 1 Ganhou!!")
-        elif Player1 == "papel" and Player2 == "tesoura":
-            print("Player 2 Ganhou!!")
-        elif Player1 == "tesoura" and Player2 == "papel":
-            print("Player 1 Ganhou!")
-        elif Player1 == "tesoura" and Player2 == "pedra":
-            print("Player 2 Ganhou!!")
+            placar2 += 1
         
     # Player X Bot
     elif opcao ==2:
@@ -59,18 +56,12 @@ while True:
         # Possíveis resultados
         if playerVsB == botVsP:
             print("Ocorreu um empate!")
-        elif botVsP == "tesoura" and playerVsB == "pedra":
+        elif (botVsP == "tesoura" and playerVsB == "pedra") or (botVsP == "pedra" and playerVsB == "papel") or (botVsP == "papel" and playerVsB == "tesoura"):
             print("O jogador venceu!")
-        elif botVsP == "tesoura" and playerVsB == "papel":
+            placar1 += 1
+        else:
             print("O Bot venceu! Mais sorte na próxima.")
-        elif botVsP == "pedra" and playerVsB == "tesoura":
-            print("O Bot venceu! Mais sorte na próxima.")
-        elif botVsP == "pedra" and playerVsB == "papel":
-            print("O jogador venceu!")
-        elif botVsP == "papel" and playerVsB == "pedra":
-            print("O Bot venceu! Mais sorte na próxima.")
-        elif botVsP == "papel" and playerVsB == "tesoura":
-            print("O Jogador venceu!")
+            placar2 += 1
 
     elif opcao == 3:
         print("Bem Vindo ao Jokempo digital!!")
@@ -79,7 +70,6 @@ while True:
     # aleatorio
         bot1 = random.randint(0,2)
 
-        # gambiarra do diabo
         if bot1 == 0:
             bot1Res = "pedra"
         elif bot1 == 1:
@@ -91,7 +81,6 @@ while True:
         # copia e cola
         bot2 = random.randint(0,2)
 
-        # gambiarra do diabo
         if bot2 == 0:
             bot2Res = "pedra"
         elif bot2 == 1:
@@ -103,18 +92,13 @@ while True:
         if bot1 == bot2:
             print("Eles empataram!")
         elif bot1 != bot2:
-            if bot1 == 0 and bot2 == 1:
+            if (bot1 == 0 and bot2 == 1) or (bot1 == 1 and bot2 == 2) or (bot1 == 2 and bot2 == 0):
                 print("bot2 venceu")
-            elif bot1 == 0 and bot2 == 2:
+                placar2 += 1
+            else:
                 print("bot1 venceu")
-            #acaba pelo amor de deus, q coisa feia
-            elif bot1 == 1 and bot2 == 0:
-                print("bot1 venceu")
-            elif bot1 == 1 and bot2 == 2:
-                print("o bot2 venceu")
-            elif bot1 == 2 and bot2 == 1:
-                print("o bot1 venceu")
-            elif bot1 == 2 and bot2 == 0:
-                print("o bot2 venceu")
+                placar1 += 1
 
     req = input("deseja continuar jogando? ")
+
+print(f"O PLACAR GERAL FOI:  {placar1} ao competidor da esquerda A {placar2} ao competidor da esquerda")
