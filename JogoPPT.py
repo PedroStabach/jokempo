@@ -4,7 +4,6 @@ placar1 = 0
 placar2 = 0
 # looping
 while True:
-
     if req.upper() == "N":
         print("Obrigado por jogar! )")
         break
@@ -22,7 +21,6 @@ while True:
     # Player X Player
     if opcao == 1:
         print("Bem Vindo ao Jokempo digital!!")
-
         Player1 = input("Player 1, Escolha pedra, papel ou tesoura: ").lower()
         Player2 = input("Player 2, Escolha pedra, papel ou tesoura: ").lower()
 
@@ -98,7 +96,5 @@ while True:
             else:
                 print("bot1 venceu")
                 placar1 += 1
-
     req = input("deseja continuar jogando? ")
-
 print(f"O PLACAR GERAL FOI:  {placar1} ao competidor da esquerda A {placar2} ao competidor da esquerda")
