@@ -35,11 +35,10 @@ while True:
         print("nao tem ainda")
     elif opcao == 3:
     #parte do pedrinho 
-    # BOT X BOT, nao posso usar lista lascou 
+    # BOT X BOT, nao posso usar lista
     #aleatorio
         bot1 = random.randint(0,2)
 
-        # gambiarra do diabo
         if bot1 == 0:
             bot1Res = "pedra"
         elif bot1 == 1:
@@ -51,7 +50,6 @@ while True:
         #copia e cola
         bot2 = random.randint(0,2)
 
-        # gambiarra do diabo
         if bot2 == 0:
             bot2Res = "pedra"
         elif bot2 == 1:
@@ -67,7 +65,6 @@ while True:
                 print("bot2 venceu")
             elif bot1 == 0 and bot2 == 2:
                 print("bot1 venceu")
-            #acaba pelo amor de deus, q coisa feia
             elif bot1 == 1 and bot2 == 0:
                 print("bot1 venceu")
             elif bot1 == 1 and bot2 == 2:
