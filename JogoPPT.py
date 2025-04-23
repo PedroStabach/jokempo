@@ -1,14 +1,14 @@
 import random
-
+req = input("Deseja jogar? S/N: ")
 # looping
 while True:
-    req = input("Deseja jogar? S/N: ")
+
     if req.upper() == "N":
         print("Obrigado por jogar! )")
         break
     elif req.upper() != "S":
         print("Opção inválida. Digite apenas S ou N.")
-        continue
+        req = input("Deseja jogar? S/N: ")
     # opcao de jogo
     print("Qual opcao deseja jogar?")
     print("Se deseja jogar Player x Player digite 1.")
