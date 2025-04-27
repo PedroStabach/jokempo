@@ -64,7 +64,7 @@ while True:
     elif opcao == 3:
         print("Bem Vindo ao Jokempo digital!!")
     # parte do pedrinho 
-    # BOT X BOT, nao posso usar lista lascou 
+    # BOT X BOT, nao posso usar lista
     # aleatorio
         bot1 = random.randint(0,2)
 
